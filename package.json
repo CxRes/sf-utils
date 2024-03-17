@@ -1,0 +1,38 @@
+{
+  "name": "structured-field-utils",
+  "version": "1.0.0",
+  "description": "Utilities to work with structured fields",
+  "keywords": [
+    "structured field",
+    "structured fields",
+    "structured header",
+    "structured headers",
+    "media-type",
+    "media type",
+    "content-type",
+    "content type"
+  ],
+  "author": "Rahul Gupta",
+  "license": "MPL-2.0",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "src/*",
+    "types/*"
+  ],
+  "dependencies": {
+    "structured-headers": "2.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.2"
+  },
+  "scripts": {
+    "lint": "eslint *.js src/** && prettier *.js src/** --check",
+    "types": "tsc",
+    "prepublish": "pnpm run lint && pnpm run types"
+  }
+}
